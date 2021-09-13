@@ -1,0 +1,27 @@
+﻿@model StudioGlumeScena.Models.Ucenik
+@{
+    ViewBag.Title = "Ucenik";
+}
+
+<h1 class="text-left"><b>Početna</b></h1>
+<hr style="border-top: 1px solid #E2C044" />
+<div class="row login-page-div-content">
+    <div class="col-md-6 login-page-div-content">
+        <h3>Sledeći čas:</h3>
+        @Model.Grupa.DanOdrzavanjaCasa<br />
+        @Model.Grupa.VremeCasa<br />
+        @Model.Grupa.Lokacija.Adresa, @Model.Grupa.NazivOpstine
+    </div>
+    <div class="col-md-6 login-page-div-content">
+        <h3>Zadatak za sledeći čas:</h3>
+        @Model.Grupa.AktivniZadatak
+    </div>
+</div>
+    <div class="row login-page-div-content">
+        <div class="col-md-4 login-page-div-content">
+            @Html.ActionLink("Pretraga profesora", "PretragaProfesora", "Ucenik", new { @class = "btn btn-lg button" })
+        </div>
+        <div class="col-md-8 login-page-div-content">
+
+        </div>
+    </div>

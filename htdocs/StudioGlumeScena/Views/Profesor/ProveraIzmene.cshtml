@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Provera izmene";
+}
+
+<h1><b>Provera izmene</b></h1>
+<hr style="border-top: 1px solid #E2C044" />
+@using (Html.BeginForm())
+{
+    <label for="jmbg">Unesite JMBG učenika kog želite da izmenite</label>
+    <input class="narrow form-control" type="text" id="jmbg" name="jmbg" required />
+    <button type="submit" class="btn button narrow">Provera</button>
+}
+@Html.ActionLink("Nazad na početnu stranu", "Pocetna", "Profesor", null, new { @class = "btn btn-lg button nazad-na-pocetnu-stranu-button" })

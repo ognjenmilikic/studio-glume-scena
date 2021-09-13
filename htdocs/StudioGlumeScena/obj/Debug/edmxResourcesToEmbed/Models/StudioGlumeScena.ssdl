@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="StudioGlumeScenaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Grupa">
+    <Key>
+      <PropertyRef Name="BrojGrupe" />
+    </Key>
+    <Property Name="BrojGrupe" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VremeCasa" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DanOdrzavanjaCasa" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="AktivniZadatak" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="JMBGp" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NazivOpstine" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Lokacija">
+    <Key>
+      <PropertyRef Name="NazivOpsite" />
+    </Key>
+    <Property Name="NazivOpsite" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Adresa" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Profesor">
+    <Key>
+      <PropertyRef Name="JMBGp" />
+    </Key>
+    <Property Name="JMBGp" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Ime" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Prezime" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="GodRodjenja" Type="int" Nullable="false" />
+    <Property Name="BrTelefona" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Adresa" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Ucenik">
+    <Key>
+      <PropertyRef Name="JMBGu" />
+    </Key>
+    <Property Name="JMBGu" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Ime" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Prezime" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="GodinaRodjenja" Type="int" Nullable="false" />
+    <Property Name="BrTelefona" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Adresa" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PoslednjaPlacenaClanarina" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="BrojGrupe" Type="int" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_Grupa_Lokacija">
+    <End Role="Lokacija" Type="Self.Lokacija" Multiplicity="1" />
+    <End Role="Grupa" Type="Self.Grupa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lokacija">
+        <PropertyRef Name="NazivOpsite" />
+      </Principal>
+      <Dependent Role="Grupa">
+        <PropertyRef Name="NazivOpstine" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Grupa_Profesor">
+    <End Role="Profesor" Type="Self.Profesor" Multiplicity="1" />
+    <End Role="Grupa" Type="Self.Grupa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Profesor">
+        <PropertyRef Name="JMBGp" />
+      </Principal>
+      <Dependent Role="Grupa">
+        <PropertyRef Name="JMBGp" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ucenik_Grupa">
+    <End Role="Grupa" Type="Self.Grupa" Multiplicity="1" />
+    <End Role="Ucenik" Type="Self.Ucenik" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grupa">
+        <PropertyRef Name="BrojGrupe" />
+      </Principal>
+      <Dependent Role="Ucenik">
+        <PropertyRef Name="BrojGrupe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="StudioGlumeScenaModelStoreContainer">
+    <EntitySet Name="Grupa" EntityType="Self.Grupa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Lokacija" EntityType="Self.Lokacija" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Profesor" EntityType="Self.Profesor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ucenik" EntityType="Self.Ucenik" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Grupa_Lokacija" Association="Self.FK_Grupa_Lokacija">
+      <End Role="Lokacija" EntitySet="Lokacija" />
+      <End Role="Grupa" EntitySet="Grupa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Grupa_Profesor" Association="Self.FK_Grupa_Profesor">
+      <End Role="Profesor" EntitySet="Profesor" />
+      <End Role="Grupa" EntitySet="Grupa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ucenik_Grupa" Association="Self.FK_Ucenik_Grupa">
+      <End Role="Grupa" EntitySet="Grupa" />
+      <End Role="Ucenik" EntitySet="Ucenik" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

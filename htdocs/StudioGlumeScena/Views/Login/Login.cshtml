@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+<h2 class="text-center">Login</h2>
+<hr style="border-top: 1px solid #E2C044" />
+<div class="form-container">
+    @if (User.Identity.IsAuthenticated)
+    {
+        <h3 class="text-center">Već ste ulogovani, @User.Identity.Name</h3>
+        if (ViewBag.Role == "Profesor")
+        {
+            @Html.ActionLink("Vrati se na početnu stranu", "Pocetna", "Profesor", null, new { @class = "btn button" });
+        }
+        else if (ViewBag.Role == "Ucenik")
+        {
+            @Html.ActionLink("Vrati se na početnu stranu", "Pocetna", "Ucenik", null, new { @class = "btn button" });
+        }
+    }
+    else
+    {
+        using (Html.BeginForm())
+        {
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" name="email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" name="password">
+            </div>
+            <button type="submit" class="btn button">Login</button>
+            @Html.ValidationSummary(true, "", new { @class = "text-warning text-left" })
+        }
+    }
+</div>
+
+

@@ -1,0 +1,73 @@
+﻿@model IEnumerable<StudioGlumeScena.Models.Ucenik>
+
+@{
+    ViewBag.Title = "ListaUcenika";
+}
+
+<h1><b>ListaUcenika</b></h1>
+<table class="table">
+    <tr>
+        <th>
+            JMBG
+        </th>
+        <th>
+            Ime
+        </th>
+        <th>
+            Prezime
+        </th>
+        <th>
+            Godina rođenja
+        </th>
+        <th>
+            Broj telefona
+        </th>
+        <th>
+            Adresa
+        </th>
+        <th>
+            Poslednja plaćena članarina
+        </th>
+        <th>
+            Email
+        </th>
+        <th>
+            Broj grupe
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.JMBGu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prezime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GodinaRodjenja)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BrTelefona)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adresa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PoslednjaPlacenaClanarina)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BrojGrupe)
+            </td>
+        </tr>
+    }
+
+</table>
+@Html.ActionLink("Nazad na početnu stranicu", "Pocetna", "Profesor", null, new { @class = "btn button narrow btn-lg nazad-na-pocetnu-stranu-button" })

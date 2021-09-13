@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Pretraga profesora";
+}
+
+<h1>Pretraga profesora</h1>
+<hr style="border-top: 1px solid #E2C044" />
+    <div class="row login-page-div-content">
+        <div class="col-md-6 login-page-div-content">
+            <label for="ime">Ime profesora:</label>
+            <input type="text" name="ime" id="ime" class="form-control" style="width:300px;" />
+            <button type="submit" class="btn button" style="width:300px;" onclick="pretrazi()">Pretraži</button>
+        </div>
+        <div id="pretrazeniProfesor" class="col-md-6 login-page-div-content div-border-left">
+            
+        </div>
+    </div>
+    @Html.ActionLink("Nazad na početnu stranu", "Pocetna", "Ucenik", null, new { @class = "btn button nazad-na-pocetnu-stranu-button"})
+    <script>
+    function pretrazi() {
+        var ime = document.getElementById("ime").value;
+        $.ajax({
+            url: '@Url.Action("PretrazeniProfesor", "Ucenik")',
+            data: { ime: ime },
+            success: function(result) {
+                $('#pretrazeniProfesor').html(result);
+            }
+        });
+    }
+    </script>
+
+
+

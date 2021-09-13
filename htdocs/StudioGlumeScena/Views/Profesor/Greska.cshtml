@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Greska";
+}
+
+<h1><b>Greška</b></h1>
+<hr style="border-top: 1px solid #E2C044" />
+<div class="row login-page-div-content">
+    <div class="col-md-6 login-page-div-content">
+        <p>Greška pri pozivu radnje, pokušajte ponovo.</p>
+    </div>
+    <div class="col-md-6 login-page-div-content">
+        <img src="~/Content/images/sadface.png" alt="sadface" />
+    </div>
+    @Html.ActionLink("Nazad na početnu stranicu", "Pocetna", "Profesor", null, new { @class = "btn button narrow btn-lg" })
+</div>
+

@@ -1,0 +1,59 @@
+﻿@model StudioGlumeScena.Models.Ucenik
+
+@{
+    ViewBag.Title = "Potvrda brisanja";
+}
+
+<h1><b>Potvrda brisanja</b></h1>
+<hr style="border-top: 1px solid #E2C044" />
+<h3>Da li ste sigurni da želite da obrišete ovog učenika?</h3>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <div class="form-group">
+            @Html.LabelFor(model => model.JMBGu, "JMBG", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.JMBGu, new { @readonly = "true", @class = "form-control narrow" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Ime, "Ime", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.Ime, new { @readonly = "true", @class = "form-control narrow" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Prezime, "Prezime", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.Prezime, new { @readonly = "true", @class = "form-control narrow" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.GodinaRodjenja, "Godina rođenja", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.GodinaRodjenja, new { @readonly = "true", @class = "form-control narrow" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.BrTelefona, "Broj telefona", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.BrTelefona, new { @readonly = "true", @class = "form-control narrow" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Adresa, "Adresa", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.Adresa, new { @readonly = "true", @class = "form-control narrow" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.PoslednjaPlacenaClanarina, "Poslednja plaćena članarina", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.PoslednjaPlacenaClanarina, new { @readonly = "true", @class = "form-control narrow" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Email, "Email", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.Email, new { @readonly = "true", @class = "form-control narrow" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.BrojGrupe, "Broj grupe", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.BrojGrupe, new { @readonly = "true", @class = "form-control narrow" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Password, "Password", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.Password, new { @readonly = "true", @class = "form-control narrow" })
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Obriši" class="col-md-offset-2 btn btn-lg button narrow" />
+        </div>
+    </div>
+}
+@Html.ActionLink("Nazad na početnu stranu", "Pocetna", "Profesor", null, new { @class = "btn btn-lg button nazad-na-pocetnu-stranu-button" })

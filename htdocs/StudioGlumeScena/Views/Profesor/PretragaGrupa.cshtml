@@ -1,0 +1,17 @@
+﻿@model IEnumerable<StudioGlumeScena.Models.Grupa>
+@{
+    ViewBag.Title = "Pretraga grupa";
+}
+
+<h1><b>Pretraga grupa</b></h1>
+<hr style="border-top: 1px solid #E2C044" />
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        <label for="brGrupe">Izaberite vašu grupu:</label>
+        @Html.DropDownList("brGrupe", new SelectList(Model.Select(t => t.BrojGrupe)), "Izaberite grupu kojoj predajete", new { @class = "form-control narrow" })
+        <button type="submit" class="btn button narrow">Pretraži</button>
+    </div>
+}
+@Html.ActionLink("Nazad na početnu stranicu", "Pocetna", "Profesor", null, new { @class = "btn button narrow btn-lg nazad-na-pocetnu-stranu-button" })
+

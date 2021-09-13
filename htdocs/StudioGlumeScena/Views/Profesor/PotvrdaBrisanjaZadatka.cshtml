@@ -1,0 +1,18 @@
+﻿@model StudioGlumeScena.Models.Grupa
+@{
+    ViewBag.Title = "Potvrda brisanja zadatka";
+}
+
+<h2><b>Potvrda brisanja zadatka</b></h2>
+<hr style="border-top: 1px solid #E2C044" />
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        <label for="zadatak">Obriši zadatak za grupu broj @Model.BrojGrupe</label>
+        @Html.TextAreaFor(model => model.AktivniZadatak, new {@rows="10", @readonly="true", @Value = Model.AktivniZadatak, @class = "form-control narrow" })
+        @Html.HiddenFor(model => model.BrojGrupe)
+        <button type="submit" class="btn button narrow">Obriši</button>
+    </div>
+}
+@Html.ActionLink("Nazad na početnu stranicu", "Pocetna", "Profesor", null, new { @class = "btn button narrow btn-lg nazad-na-pocetnu-stranu-button" })
+

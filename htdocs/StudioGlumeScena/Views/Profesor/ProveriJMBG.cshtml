@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Unos novog učenika";
+}
+<h1><b>Unos novog učenika</b></h1>
+<hr style="border-top: 1px solid #E2C044" />
+@using (Html.BeginForm())
+{
+    <label for="jmbg">Unesite JMBG novog učenika</label>
+    <input class="narrow form-control" type="text" id="jmbg" name="jmbg" required />
+    <button type="submit" class="btn button narrow">Provera</button>
+}
+@Html.ActionLink("Nazad na početnu stranu", "Pocetna", "Profesor", null, new { @class = "btn button btn-lg nazad-na-pocetnu-stranu-button" })
+
+
+

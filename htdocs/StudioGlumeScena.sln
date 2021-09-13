@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudioGlumeScena", "StudioGlumeScena\StudioGlumeScena.csproj", "{5A4394C1-167C-4A4B-8C9C-0043A55F6558}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A4394C1-167C-4A4B-8C9C-0043A55F6558}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A4394C1-167C-4A4B-8C9C-0043A55F6558}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A4394C1-167C-4A4B-8C9C-0043A55F6558}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A4394C1-167C-4A4B-8C9C-0043A55F6558}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {428A43E5-053A-4F93-92DE-0DE109E964CB}
+	EndGlobalSection
+EndGlobal

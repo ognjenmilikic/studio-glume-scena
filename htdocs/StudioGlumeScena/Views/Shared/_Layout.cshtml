@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="~/Content/images/favicon.png" />
+    <title>@ViewBag.Title - Studio glume "Scena"</title>
+    <link rel="stylesheet" href="~/Content/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/Content/css/Site.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h2 class="login-page-div-content">Studio glume -  „Scena”</h2>
+            </div>
+            <div class="col-md-4">
+                <img class="img-responsive" src="~/Content/images/layout-thumbnail.png" alt="thumbnail" />
+            </div>
+            <div class="col-md-4">
+                @if (User.Identity.IsAuthenticated)
+                {
+                <div class="row">
+                    <div class="col-md-8">
+                        <p class="login-page-div-content user-mail">Zdravo, @User.Identity.Name</p>
+                    </div>
+                    <div class="col-md-4">
+                        @Html.ActionLink("Logout", "Logout", "Login", null, new { @class = "btn button login-page-div-content" })
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+    <div class="footer">
+        <div class="container footer-div">
+            <p>&copy; @DateTime.Now.Year - Studio glume „Scena”</p>
+        </div>
+    </div>
+    
+    
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

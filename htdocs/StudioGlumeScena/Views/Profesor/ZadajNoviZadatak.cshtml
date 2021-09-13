@@ -1,0 +1,23 @@
+﻿@model StudioGlumeScena.Models.Grupa
+@{
+    ViewBag.Title = "Zadaj novi zadatak";
+}
+
+<h1><b>Zadaj novi zadatak</b></h1>
+<hr style="border-top: 1px solid #E2C044" />
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        <label for="zadatak">Izmeni aktivan zadatak za grupu broj @Model.BrojGrupe</label>
+        @Html.TextAreaFor(model => model.AktivniZadatak, new { @rows = "10", @Value = Model.AktivniZadatak, @class = "form-control narrow" })
+        @Html.HiddenFor(model => model.BrojGrupe)
+        @Html.HiddenFor(model => model.DanOdrzavanjaCasa)
+        @Html.HiddenFor(model => model.JMBGp)
+        @Html.HiddenFor(model => model.Lokacija)
+        @Html.HiddenFor(model => model.NazivOpstine)
+        @Html.HiddenFor(model => model.VremeCasa)
+        <button type="submit" class="btn button narrow">Izmeni</button>
+    </div>
+}
+@Html.ActionLink("Nazad na početnu stranicu", "Pocetna", "Profesor", null, new { @class = "btn button narrow btn-lg nazad-na-pocetnu-stranu-button" })
+

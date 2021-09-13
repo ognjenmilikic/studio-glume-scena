@@ -1,0 +1,28 @@
+﻿@model StudioGlumeScena.Models.Ucenik
+@if (Model == null)
+{
+    <p>Greska, traženi učenik ne postoji, pokušajte ponovo!</p>
+}
+else
+{
+    <label for="ime">Ime:</label>
+    <span id="ime">@Html.DisplayFor(model => model.Ime)</span>
+    <br />
+    <label for="prezime">Prezime:</label>
+    <span id="prezime">@Html.DisplayFor(model => model.Prezime)</span>
+    <br />
+    <label for="godinaRodjenja">Godina rodjenja:</label>
+    <span id="godinaRodjenja">@Html.DisplayFor(model => model.GodinaRodjenja)</span>
+    <br />
+    <label for="brTelefona">Broj telefona:</label>
+    <span id="brTelefona">@Html.DisplayFor(model => model.BrTelefona)</span>
+    <br />
+    <label for="adresa">Adresa:</label>
+    <span id="adresa">@Html.DisplayFor(model => model.Adresa)</span>
+    <br />
+    <label for="poslednjaPlacenaClanarina">Poslednja plaćena članarina:</label>
+    <span id="poslednjaPlacenaClanarina">@Html.DisplayFor(model => model.PoslednjaPlacenaClanarina)</span>
+    <br />
+    <label for="email">Email:</label>
+    <span id="email">@Html.DisplayFor(model => model.Email)</span>
+}

@@ -1,0 +1,76 @@
+﻿@model IEnumerable<StudioGlumeScena.Models.Grupa>
+@{
+    ViewBag.Title = "Profesor";
+}
+
+<h1 class="text-left"><b>Početna</b></h1>
+<hr style="border-top: 1px solid #E2C044" />
+<div class="row login-page-div-content">
+    <div class="col-md-6 login-page-div-content">
+        <p><b>Rad sa učenicima:</b></p>
+        <div class="row login-page-div-content">
+            <div class="col-md-6 login-page-div-content">
+                @Html.ActionLink("Pretraga učenika", "PretragaUcenika", "Profesor", null, new { @class = "btn btn-lg button" })
+            </div>
+            <div class="col-md-6 login-page-div-content">
+                @Html.ActionLink("Unos učenika", "ProveriJMBG", "Profesor", null, new { @class = "btn btn-lg button" })
+            </div>
+        </div>
+        <div class="row login-page-div-content">
+            <div class="col-md-6 login-page-div-content">
+                @Html.ActionLink("Obriši učenika", "BrisanjeUcenika", "Profesor", null, new { @class = "btn btn-lg button" })
+            </div>
+            <div class="col-md-6 login-page-div-content">
+                @Html.ActionLink("Izmeni učenika", "ProveraIzmene", "Profesor", null, new { @class = "btn btn-lg button" })
+            </div>
+        </div>
+        <div class="row login-page-div-content">
+            <div class="col-md-6 login-page-div-content">
+                @Html.ActionLink("Pretraga grupa", "PretragaGrupa", "Profesor", null, new { @class = "btn btn-lg button" })
+            </div>
+            <div class="col-md-6">
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 login-page-div-content">
+        <p><b>Sledeći časovi:</b></p>
+        <div class="row login-page-div-content">
+            @foreach (var item in Model)
+            {
+            <div class="col-md-6 div-info-profesor">
+                <p class="info-text-profesor">Grupa broj: @Html.DisplayFor(modelitem => item.BrojGrupe)</p>
+                <p class="info-text-profesor">Vreme časa: @Html.DisplayFor(modelitem => item.DanOdrzavanjaCasa) @Html.DisplayFor(modelitem => item.VremeCasa)</p>
+                <p class="info-text-profesor">Lokacija: @Html.DisplayFor(modelitem => item.Lokacija.Adresa), @Html.DisplayFor(modelitem => item.NazivOpstine)</p>
+            </div>
+            }
+        </div>
+    </div>
+</div>
+    <div class="row login-page-div-content">
+        <div class="col-md-6 login-page-div-content">
+            <p><b>Rad sa zadacima:</b></p>
+            <div class="row login-page-div-content">
+                <div class="col-md-6 login-page-div-content">
+                    @Html.ActionLink("Zadaj novi zadatak", "IzaberiGrupu", "Profesor", null, new { @class = "btn btn-lg button" })
+                </div>
+                <div class="col-md-6 login-page-div-content">
+                    @Html.ActionLink("Obriši zadatak", "ObrisiZadatak", "Profesor", null, new { @class = "btn btn-lg button" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 login-page-div-content">
+            <p><b>Zadaci za sledeće časove:</b></p>
+            <div class="row login-page-div-content">
+                @foreach (var item in Model)
+                {
+                    <div class="col-md-6 div-info-profesor">
+                        <p class="info-text-profesor">Grupa broj: @Html.DisplayFor(modelitem => item.BrojGrupe)</p>
+                        <p class="info-text-profesor">Zadatak za sledeći čas: @Html.DisplayFor(modelitem => item.AktivniZadatak)</p>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+
