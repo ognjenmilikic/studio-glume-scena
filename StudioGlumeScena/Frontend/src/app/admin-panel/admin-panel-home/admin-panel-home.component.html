@@ -1,0 +1,81 @@
+<ng-container *ngIf="!loading">
+  <div class="container-fluid info-section-2 text-center big-padding-top">
+    <p class="display-3 m-0">Admin panel</p>
+  </div>
+  <div class="info-section-2 clipped"></div>
+  <div class="container-fluid info-section-1 pb-5 pt-5">
+    <div class="row">
+      <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 p-4">
+        <div class="info-section-2 drop-shadow p-4 text-center h-100 d-flex flex-column">
+          <div class="mb-auto">
+            <i class="fas fa-graduation-cap fa-2x"></i>
+            <p class="h4">Učenici</p>
+            <hr>
+            <p class="mb-1">Ukupan broj: {{ sviUcenici.length }}</p>
+            <p class="mb-1">Broj mlađih osnovaca: {{ vratiBrojMladjihOsnovaca() }}</p>
+            <p class="mb-1">Broj starijih osnovaca: {{ vratiBrojStarijihOsnovaca() }}</p>
+            <p class="mb-1">Broj srednjoškolaca: {{ vratiBrojSrednjoskolaca() }}</p>
+          </div>
+          <div class="mt-3">
+            <a class="btn btn-transparent-secondary" href="admin-panel#ucenici">Idi na učenike</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 p-4">
+        <div class="info-section-2 drop-shadow p-4 text-center h-100 d-flex flex-column">
+          <div class="mb-auto">
+            <i class="fas fa-chalkboard-teacher fa-2x"></i>
+            <p class="h4">Profesori</p>
+            <hr>
+            <p class="mb-1">Ukupan broj: {{ sviProfesori.length }}</p>
+            <p class="mb-1">Prosečan broj grupa po profesoru: {{ sveGrupe.length / sviProfesori.length | number: '1.0-1'}}</p>
+            <p class="mb-1">Prosečan broj učenika po profesoru: {{ sviUcenici.length / sviProfesori.length | number: '1.0-1'}}</p>
+          </div>
+          <div class="mt-3">
+            <a class="btn btn-transparent-secondary" href="admin-panel#profesori">Idi na profesore</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 p-4">
+        <div class="info-section-2 drop-shadow p-4 text-center h-100 d-flex flex-column">
+          <div class="mb-auto">
+            <i class="fas fa-users fa-2x"></i>
+            <p class="h4">Grupe</p>
+            <hr>
+            <p class="mb-2">Prosečan broj učenika po grupi: {{ this.sviUcenici.length / this.sveGrupe.length | number : '1.0-1'}}</p>
+            <p class="mb-1"><b>Broj grupa po lokaciji</b></p>
+            <ng-container *ngFor="let lokacija of sveLokacije">
+              <p class="mb-1">{{ lokacija.naziv }}: {{ vratiBrojGrupaZaLokaciju(lokacija.id) }}</p>
+            </ng-container>
+          </div>
+          <div class="mt-3">
+            <a class="btn btn-transparent-secondary" href="admin-panel#grupe">Idi na grupe</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 p-4">
+        <div class="info-section-2 drop-shadow p-4 text-center h-100 d-flex flex-column">
+          <div class="mb-auto">
+            <i class="fas fa-clipboard-list fa-2x"></i>
+            <p class="h4">Prijave za upis</p>
+            <hr>
+            <p class="mb-1">Broj nepročitanih prijava: {{ vratiBrojNeprocitanihPrijava() }}</p>
+            <p class="mb-1">Broj nerazrešenih prijava: {{ vratiBrojNerazresenihPrijava() }}</p>
+          </div>
+          <div class="mt-3">
+            <a class="btn btn-transparent-secondary" href="admin-panel#prijave">Idi na prijave</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-separator></app-separator>
+  <app-ucenici-crud #uceniciCrud [ucenici]="sviUcenici" [sveGrupe]="sveGrupe" (promenaMedjuUcenicima)="ucitajStranicu()"></app-ucenici-crud>
+  <app-separator-secondary></app-separator-secondary>
+  <app-profesori-crud #profesoriCrud [profesori]="sviProfesori" (promenaMedjuProfesorima)="ucitajStranicu()"></app-profesori-crud>
+  <app-separator></app-separator>
+  <app-grupe-crud #grupeCrud [grupe]="sveGrupe" [lokacije]="sveLokacije" [profesori]="sviProfesori" [uzrasti]="sviUzrasti" (promenaMedjuGrupama)="ucitajStranicu()"></app-grupe-crud>
+  <app-separator-secondary></app-separator-secondary>
+  <app-prijave-za-upis-crud #prijaveCrud [sveGrupe]="sveGrupe" [prijave]="svePrijaveZaUpis" (promenaMedjuPrijavama)="ucitajStranicu()"></app-prijave-za-upis-crud>
+</ng-container>
+<app-spinner [loading]="loading"></app-spinner>

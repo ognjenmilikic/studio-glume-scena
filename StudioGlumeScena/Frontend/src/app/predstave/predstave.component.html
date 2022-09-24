@@ -1,0 +1,26 @@
+<img class="hero-image" src="../../assets/images/home/majstori-majstori.png">
+<div class="predstave-hero d-flex justify-content-center align-items-center">
+    <div class="hero-text-width">
+        <p class="display-3 text-center">Predstave</p>
+        <p class="h6 text-center">
+            Svake godine u našoj školi organizuju se 2 predstave u sopstvenoj produkciji u kojoj učestvuju polaznici svih uzrasta.
+            Do sada smo u našim pozorištima odigrali preko 30 uspešnih predstava! Evo i nekih od njih.
+        </p>
+    </div>
+</div>
+<div class="container-fluid" *ngFor="let predstava of predstave">
+    <p class="predstava-title text-center">{{ predstava.naziv }}</p>
+    <div class="row p-5 predstava-section">
+        <div class="col-md-6 d-flex align-items-center">
+            <div>
+                <p class="predstava-text"><b>Režija:</b> {{ predstava.rezija }}</p>
+                <p class="predstava-text"><b>Produkcija:</b> {{ predstava.produkcija }}</p>
+                <p class="predstava-text"><b>Organizator:</b> {{ predstava.organizator }}</p>
+                <p class="predstava-text"><b>Opis:</b> {{ predstava.opis }}</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <img class="img-fluid predstava-image" [src]="predstava.putanjaDoSlike">
+        </div>
+    </div>
+</div>

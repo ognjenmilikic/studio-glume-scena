@@ -1,0 +1,48 @@
+D:\diplomski\Backend\StudioGlumeScena.Common\bin\Debug\net6.0\StudioGlumeScena.Common.deps.json
+D:\diplomski\Backend\StudioGlumeScena.Common\bin\Debug\net6.0\StudioGlumeScena.Common.dll
+D:\diplomski\Backend\StudioGlumeScena.Common\bin\Debug\net6.0\StudioGlumeScena.Common.pdb
+D:\diplomski\Backend\StudioGlumeScena.Common\obj\Debug\net6.0\StudioGlumeScena.Common.csproj.AssemblyReference.cache
+D:\diplomski\Backend\StudioGlumeScena.Common\obj\Debug\net6.0\StudioGlumeScena.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\diplomski\Backend\StudioGlumeScena.Common\obj\Debug\net6.0\StudioGlumeScena.Common.AssemblyInfoInputs.cache
+D:\diplomski\Backend\StudioGlumeScena.Common\obj\Debug\net6.0\StudioGlumeScena.Common.AssemblyInfo.cs
+D:\diplomski\Backend\StudioGlumeScena.Common\obj\Debug\net6.0\StudioGlumeScena.Common.csproj.CoreCompileInputs.cache
+D:\diplomski\Backend\StudioGlumeScena.Common\obj\Debug\net6.0\StudioGlumeScena.Common.dll
+D:\diplomski\Backend\StudioGlumeScena.Common\obj\Debug\net6.0\refint\StudioGlumeScena.Common.dll
+D:\diplomski\Backend\StudioGlumeScena.Common\obj\Debug\net6.0\StudioGlumeScena.Common.pdb
+D:\diplomski\Backend\StudioGlumeScena.Common\obj\Debug\net6.0\ref\StudioGlumeScena.Common.dll
+C:\diplomski\Backend\StudioGlumeScena.Common\bin\Debug\net6.0\StudioGlumeScena.Common.deps.json
+C:\diplomski\Backend\StudioGlumeScena.Common\bin\Debug\net6.0\StudioGlumeScena.Common.dll
+C:\diplomski\Backend\StudioGlumeScena.Common\bin\Debug\net6.0\StudioGlumeScena.Common.pdb
+C:\diplomski\Backend\StudioGlumeScena.Common\obj\Debug\net6.0\StudioGlumeScena.Common.csproj.AssemblyReference.cache
+C:\diplomski\Backend\StudioGlumeScena.Common\obj\Debug\net6.0\StudioGlumeScena.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\diplomski\Backend\StudioGlumeScena.Common\obj\Debug\net6.0\StudioGlumeScena.Common.AssemblyInfoInputs.cache
+C:\diplomski\Backend\StudioGlumeScena.Common\obj\Debug\net6.0\StudioGlumeScena.Common.AssemblyInfo.cs
+C:\diplomski\Backend\StudioGlumeScena.Common\obj\Debug\net6.0\StudioGlumeScena.Common.csproj.CoreCompileInputs.cache
+C:\diplomski\Backend\StudioGlumeScena.Common\obj\Debug\net6.0\StudioGlumeScena.Common.dll
+C:\diplomski\Backend\StudioGlumeScena.Common\obj\Debug\net6.0\refint\StudioGlumeScena.Common.dll
+C:\diplomski\Backend\StudioGlumeScena.Common\obj\Debug\net6.0\StudioGlumeScena.Common.pdb
+C:\diplomski\Backend\StudioGlumeScena.Common\obj\Debug\net6.0\ref\StudioGlumeScena.Common.dll
+C:\Users\Ognjen\OneDrive\Radna površina\diplomski\Backend\StudioGlumeScena.Common\bin\Debug\net6.0\StudioGlumeScena.Common.deps.json
+C:\Users\Ognjen\OneDrive\Radna površina\diplomski\Backend\StudioGlumeScena.Common\bin\Debug\net6.0\StudioGlumeScena.Common.dll
+C:\Users\Ognjen\OneDrive\Radna površina\diplomski\Backend\StudioGlumeScena.Common\bin\Debug\net6.0\StudioGlumeScena.Common.pdb
+C:\Users\Ognjen\OneDrive\Radna površina\diplomski\Backend\StudioGlumeScena.Common\obj\Debug\net6.0\StudioGlumeScena.Common.csproj.AssemblyReference.cache
+C:\Users\Ognjen\OneDrive\Radna površina\diplomski\Backend\StudioGlumeScena.Common\obj\Debug\net6.0\StudioGlumeScena.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ognjen\OneDrive\Radna površina\diplomski\Backend\StudioGlumeScena.Common\obj\Debug\net6.0\StudioGlumeScena.Common.AssemblyInfoInputs.cache
+C:\Users\Ognjen\OneDrive\Radna površina\diplomski\Backend\StudioGlumeScena.Common\obj\Debug\net6.0\StudioGlumeScena.Common.AssemblyInfo.cs
+C:\Users\Ognjen\OneDrive\Radna površina\diplomski\Backend\StudioGlumeScena.Common\obj\Debug\net6.0\StudioGlumeScena.Common.csproj.CoreCompileInputs.cache
+C:\Users\Ognjen\OneDrive\Radna površina\diplomski\Backend\StudioGlumeScena.Common\obj\Debug\net6.0\StudioGlumeScena.Common.dll
+C:\Users\Ognjen\OneDrive\Radna površina\diplomski\Backend\StudioGlumeScena.Common\obj\Debug\net6.0\refint\StudioGlumeScena.Common.dll
+C:\Users\Ognjen\OneDrive\Radna površina\diplomski\Backend\StudioGlumeScena.Common\obj\Debug\net6.0\StudioGlumeScena.Common.pdb
+C:\Users\Ognjen\OneDrive\Radna površina\diplomski\Backend\StudioGlumeScena.Common\obj\Debug\net6.0\ref\StudioGlumeScena.Common.dll
+C:\diplomski\StudioGlumeScena\Backend\StudioGlumeScena.Common\bin\Debug\net6.0\StudioGlumeScena.Common.deps.json
+C:\diplomski\StudioGlumeScena\Backend\StudioGlumeScena.Common\bin\Debug\net6.0\StudioGlumeScena.Common.dll
+C:\diplomski\StudioGlumeScena\Backend\StudioGlumeScena.Common\bin\Debug\net6.0\StudioGlumeScena.Common.pdb
+C:\diplomski\StudioGlumeScena\Backend\StudioGlumeScena.Common\obj\Debug\net6.0\StudioGlumeScena.Common.csproj.AssemblyReference.cache
+C:\diplomski\StudioGlumeScena\Backend\StudioGlumeScena.Common\obj\Debug\net6.0\StudioGlumeScena.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\diplomski\StudioGlumeScena\Backend\StudioGlumeScena.Common\obj\Debug\net6.0\StudioGlumeScena.Common.AssemblyInfoInputs.cache
+C:\diplomski\StudioGlumeScena\Backend\StudioGlumeScena.Common\obj\Debug\net6.0\StudioGlumeScena.Common.AssemblyInfo.cs
+C:\diplomski\StudioGlumeScena\Backend\StudioGlumeScena.Common\obj\Debug\net6.0\StudioGlumeScena.Common.csproj.CoreCompileInputs.cache
+C:\diplomski\StudioGlumeScena\Backend\StudioGlumeScena.Common\obj\Debug\net6.0\StudioGlumeScena.Common.dll
+C:\diplomski\StudioGlumeScena\Backend\StudioGlumeScena.Common\obj\Debug\net6.0\refint\StudioGlumeScena.Common.dll
+C:\diplomski\StudioGlumeScena\Backend\StudioGlumeScena.Common\obj\Debug\net6.0\StudioGlumeScena.Common.pdb
+C:\diplomski\StudioGlumeScena\Backend\StudioGlumeScena.Common\obj\Debug\net6.0\ref\StudioGlumeScena.Common.dll

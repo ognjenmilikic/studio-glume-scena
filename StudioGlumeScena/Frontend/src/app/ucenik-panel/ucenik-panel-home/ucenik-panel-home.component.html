@@ -1,0 +1,45 @@
+<ng-container *ngIf="!loading">
+  <div class="container-fluid info-section-2 text-center big-padding-top">
+    <p class="display-3 m-0">Učenik panel</p>
+  </div>
+  <div class="info-section-2 clipped"></div>
+  <div class="container-fluid info-section-1 pb-5 pt-5">
+    <div class="row">
+      <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 p-4">
+        <div class="info-section-2 drop-shadow p-4 text-center h-100 d-flex flex-column">
+          <div class="mb-auto">
+            <i class="fas fa-users fa-2x"></i>
+            <p class="h4">Grupa</p>
+            <hr>
+            <p class="text-left"><b>Vreme održavanja časa:</b> {{ ucenik.grupa.danOdrzavanjaCasa }}, {{ ucenik.grupa.vremeOdrzavanjaCasa }}</p>
+            <p class="text-left"><b>Zadatak za sledeći čas:</b> {{ ucenik.grupa.aktivanZadatak }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 p-4">
+        <div class="info-section-2 drop-shadow p-4 text-center h-100 d-flex flex-column">
+          <div class="mb-auto">
+            <i class="fas fa-chalkboard-teacher fa-2x"></i>
+            <p class="h4">Profesor</p>
+            <hr>
+            <p class="text-left"><b>Ime i prezime:</b> {{ ucenik.grupa.profesor.ime }} {{ ucenik.grupa.profesor.prezime }}</p>
+            <p class="text-left"><b>Broj telefona:</b> <a [href]="'tel:' + ucenik.grupa.profesor.brojTelefona"> &nbsp; {{ ucenik.grupa.profesor.brojTelefona }}</a></p>
+            <p class="text-left"><b>E-mail:</b> <a [href]="'mailto:' + ucenik.grupa.profesor.email"> &nbsp; {{ ucenik.grupa.profesor.email }}</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 p-4">
+        <div class="info-section-2 drop-shadow p-4 text-center h-100 d-flex flex-column">
+          <div class="mb-auto">
+            <i class="fas fa-map-marker-alt fa-2x"></i>
+            <p class="h4">Lokacija</p>
+            <hr>
+            <p class="text-left">{{ ucenik.grupa.lokacija.naziv }}, {{ ucenik.grupa.lokacija.adresa }}</p>
+            <iframe [src]="ucenik.grupa.lokacija.mapaSafeSource" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+<app-spinner [loading]="loading"></app-spinner>

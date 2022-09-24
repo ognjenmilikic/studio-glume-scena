@@ -1,0 +1,283 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '~@angular/material' as mat;
+
+$my-custom-typography: mat.define-typography-config(
+  $headline:  mat.define-typography-level(3rem, 1, 700),
+);
+
+@include mat.core($my-custom-typography);
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$StudioGlumeScenaFrontend-primary: mat.define-palette(mat.$indigo-palette);
+$StudioGlumeScenaFrontend-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$StudioGlumeScenaFrontend-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$StudioGlumeScenaFrontend-theme: mat.define-light-theme((
+  color: (
+    primary: $StudioGlumeScenaFrontend-primary,
+    accent: $StudioGlumeScenaFrontend-accent,
+    warn: $StudioGlumeScenaFrontend-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($StudioGlumeScenaFrontend-theme);
+
+/* You can add global styles to this file, and also import other style files */
+@import 'bootstrap/dist/css/bootstrap.css';
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #681a1a;
+    color: whitesmoke;
+}
+a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+a:hover{
+    color: rgb(223, 223, 223);
+    text-decoration: none;
+}
+
+.btn-primary{
+    background-color: #9C6615;
+    color: whitesmoke;
+    border: 2px solid #9C6615;
+    transition: 0.5s;
+}
+
+.btn-secondary {
+  background-color: #555;
+  color: whitesmoke;
+  border: 2px solid #555;
+}
+
+.btn-primary:hover{
+  background-color: transparent;
+  border: 2px solid #9C6615;
+}
+
+.btn-secondary:hover {
+  background-color: transparent;
+  border: 2px solid #555;
+}
+
+.btn-primary:focus{
+  background-color: #9C6615;
+  color: whitesmoke;
+  border-color:#9C6615;
+  box-shadow: none;
+}
+
+.btn-secondary:focus {
+  background-color: #555;
+  color: whitesmoke;
+  border-color:#555;
+  box-shadow: none;
+}
+
+.btn-primary:disabled{
+    background-color: #9C6615;
+    color: whitesmoke;
+    border-color:#9C6615;
+}
+
+.btn-secondary:disabled {
+  background-color: #555;
+    color: whitesmoke;
+    border-color:#555;
+}
+
+.btn-primary:active{
+    background-color: #9C6615;
+    color: whitesmoke;
+    border-color:#9C6615;
+}
+
+.btn-secondary:active {
+  background-color: #555;
+    color: whitesmoke;
+    border-color:#555;
+}
+.mat-dialog-container{
+    background-color: #681a1a;
+    color: whitesmoke;
+}
+
+html, body { height: 100%; }
+
+.mat-focused .mat-form-field-label {
+  color: whitesmoke !important;
+ }
+
+ .mat-form-field-appearance-legacy .mat-form-field-label{
+  color: whitesmoke;
+ }
+
+ .mat-form-field-underline {
+  background-color: whitesmoke !important;
+}
+
+.mat-form-field-ripple {
+ background-color: whitesmoke !important;;
+}
+
+.mat-form-field.mat-form-field-invalid .mat-form-field-label {
+  color: whitesmoke;
+}
+
+.mat-error {
+  color: whitesmoke
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: whitesmoke;
+  -webkit-box-shadow: 0 0 0px 1000px #681a1a inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.mat-progress-spinner circle, .mat-spinner circle {
+  stroke: whitesmoke;
+  }
+
+  .btn-transparent {
+    border: 2px solid #9C6615;
+    background-color: transparent;
+    color: whitesmoke;
+    transition: .5s;
+  }
+
+  .btn-transparent:hover {
+    background-color: #9C6615;
+    border: 2px solid #9C6615;
+    color:whitesmoke;
+  }
+
+  .btn-transparent-secondary {
+    border: 2px solid #681a1a;
+    background-color: transparent;
+    color: whitesmoke;
+    transition: .5s;
+  }
+
+  .btn-transparent-secondary:hover {
+    background-color: #681a1a;
+    border: 2px solid #681a1a;
+    color: whitesmoke;
+  }
+  .mat-form-field-label {
+    color: whitesmoke;
+}
+
+.mat-table {
+  background-color: #383838;
+}
+
+.mat-header-cell {
+  color: whitesmoke;
+}
+
+.mat-cell {
+  color: whitesmoke;
+}
+
+th.mat-header-cell{
+  border-bottom-color: rgba(245, 245, 245, 0.12);
+}
+
+td.mat-cell {
+  border-bottom-color: rgba(245, 245, 245, 0.12);
+}
+
+.mat-sort-header-arrow {
+  color: whitesmoke;
+}
+
+.mat-paginator {
+  color: whitesmoke;
+  background-color: #383838;
+}
+
+.mat-select-value {
+  color: whitesmoke;
+}
+
+.mat-select-arrow {
+  color: whitesmoke;
+}
+
+.mat-icon-button.mat-button-disabled.mat-button-disabled{
+  color: whitesmoke;
+}
+
+.mat-select-panel .mat-option.mat-selected:not(.mat-option-multiple) {
+  background-color: #383838;
+  color: whitesmoke;
+}
+
+.mat-option {
+  background-color: #383838;
+  color: whitesmoke;
+}
+
+.mat-option:hover:not(.mat-option-disabled), .mat-option:focus:not(.mat-option-disabled) {
+  background-color: #555;
+}
+
+.table-action-button{
+  background-color: transparent;
+  color: whitesmoke;
+  border: 0;
+}
+
+.mat-input-element:disabled{
+  color: whitesmoke;
+  opacity: .8;
+}
+
+.mat-form-field-appearance-legacy.mat-form-field-disabled .mat-form-field-underline{
+  background-image: unset;
+  opacity: .8;
+}
+.mat-select-disabled .mat-select-value {
+  color: whitesmoke;
+  opacity: .8;
+}
+.mat-select-panel {
+  max-width: unset!important;
+}
+.table-wrapper {
+  overflow: auto;
+}
+.mat-column-redniBroj {
+  max-width: 2rem;
+}

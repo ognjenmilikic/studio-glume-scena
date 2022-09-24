@@ -1,0 +1,8 @@
+<p class="h1" mat-dialog-title>{{title}}</p>
+<div mat-dialog-content>
+    <p>{{content}}</p>
+</div>
+<div mat-dialog-actions class="float-end">
+    <button tabindex="-1" class="btn btn-primary me-3" [mat-dialog-close]="{ confirmed: false}">{{denyActionButtonLabel}}</button>
+    <button tabindex="-1" class="btn btn-primary" [mat-dialog-close]="{ confirmed: true}">{{confirmActionButtonLabel}}</button>
+</div>

@@ -1,0 +1,74 @@
+<div class="container-fluid info-section-1" *ngIf="!!ucenikForm">
+  <p class="h3 text-center">{{ naslov }}</p>
+  <form [formGroup]="ucenikForm" (ngSubmit)="sacuvaj()">
+    <div class="row">
+      <mat-form-field class="col-md-6">
+        <mat-label>Ime</mat-label>
+        <input matInput formControlName="ime">
+        <mat-error *ngIf="ucenikForm.controls.ime.touched && ucenikForm.controls.ime.errors?.required">
+          Obavezno polje.
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-md-6">
+        <mat-label>Prezime</mat-label>
+        <input matInput formControlName="prezime">
+        <mat-error *ngIf="ucenikForm.controls.prezime.touched && ucenikForm.controls.prezime.errors?.required">
+          Obavezno polje.
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field class="col-md-6">
+        <mat-label>Godina rođenja</mat-label>
+        <input matInput formControlName="godinaRodjenja">
+        <mat-error *ngIf="ucenikForm.controls.godinaRodjenja.touched && ucenikForm.controls.godinaRodjenja.errors?.required">
+          Obavezno polje.
+        </mat-error>
+        <mat-error *ngIf="ucenikForm.controls.godinaRodjenja.touched && ucenikForm.controls.godinaRodjenja.errors?.pattern">
+          Godina rođenja je u pogrešnom formatu.
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-md-6">
+        <mat-label>Broj telefona</mat-label>
+        <input matInput formControlName="brojTelefona">
+        <mat-error *ngIf="ucenikForm.controls.brojTelefona.touched && ucenikForm.controls.brojTelefona.errors?.required">
+          Obavezno polje.
+        </mat-error>
+        <mat-error *ngIf="ucenikForm.controls.brojTelefona.touched && ucenikForm.controls.brojTelefona.errors?.pattern">
+          Broj telefona je u pogrešnom formatu.
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field class="col-md-6">
+        <mat-label>Adresa</mat-label>
+        <input matInput formControlName="adresa">
+        <mat-error *ngIf="ucenikForm.controls.adresa.touched && ucenikForm.controls.adresa.errors?.required">
+          Obavezno polje.
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-md-6">
+        <mat-label>E-mail</mat-label>
+        <input matInput formControlName="email">
+        <mat-error *ngIf="ucenikForm.controls.email.touched && ucenikForm.controls.email.errors?.required">
+          Obavezno polje.
+        </mat-error>
+        <mat-error *ngIf="ucenikForm.controls.email.touched && ucenikForm.controls.email.errors?.email">
+          E-mail je u lošem formatu.
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <mat-form-field class="col-md-12 w-100">
+      <mat-label>Grupa</mat-label>
+      <mat-select formControlName="grupaId">
+        <mat-option *ngFor="let grupa of sveGrupe" [value]="grupa.id">
+          {{grupa.lokacija.naziv + ", " + grupa.danOdrzavanjaCasa + " " + grupa.vremeOdrzavanjaCasa}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div class="float-end">
+      <button class="btn btn-primary me-3" type="submit" *ngIf="!pregled" [disabled]="ucenikForm.invalid">Sačuvaj</button>
+      <button class="btn btn-secondary" type="button" (click)="close()">Izađi</button>
+    </div>
+  </form>
+</div>

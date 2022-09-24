@@ -1,0 +1,81 @@
+<div class="container-fluid mt-5 fit-height">
+    <div class="row">
+        <p class="h2 mt-5 text-center">Prijavi se za upis sada!</p>
+    </div>
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-6 my-3">
+            <form [formGroup]="upisForm" (ngSubmit)="upis()">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <mat-form-field class="w-100">
+                        <mat-label>Ime</mat-label>
+                        <input matInput formControlName="ime">
+                        <mat-error *ngIf="upisForm.controls.ime.touched && upisForm.controls.ime.dirty && upisForm.controls.ime.errors?.required">
+                            Obavezan podatak.
+                        </mat-error>
+                      </mat-form-field>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <mat-form-field class="w-100">
+                        <mat-label>Prezime</mat-label>
+                        <input matInput formControlName="prezime">
+                        <mat-error *ngIf="upisForm.controls.prezime.touched && upisForm.controls.prezime.dirty && upisForm.controls.prezime.errors?.required">
+                            Obavezan podatak.
+                        </mat-error>
+                      </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <mat-form-field class="w-100">
+                        <mat-label>E-mail</mat-label>
+                        <input matInput formControlName="email" type="email">
+                        <mat-error *ngIf="upisForm.controls.email.touched && upisForm.controls.email.dirty && upisForm.controls.email.errors?.required">
+                            Obavezan podatak.
+                        </mat-error>
+                        <mat-error *ngIf="upisForm.controls.email.touched && upisForm.controls.email.dirty && upisForm.controls.email.errors?.email">
+                            E-mail je u lošem formatu.
+                        </mat-error>
+                      </mat-form-field>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <mat-form-field class="w-100">
+                        <mat-label>Broj telefona</mat-label>
+                        <input matInput formControlName="brojTelefona">
+                        <mat-error *ngIf="upisForm.controls.brojTelefona.touched && upisForm.controls.brojTelefona.dirty && upisForm.controls.brojTelefona.errors?.required">
+                            Obavezan podatak.
+                        </mat-error>
+                        <mat-error *ngIf="upisForm.controls.brojTelefona.touched && upisForm.controls.brojTelefona.dirty && upisForm.controls.brojTelefona.errors?.pattern">
+                            Broj telefona je u lošem formatu.
+                        </mat-error>
+                      </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <mat-form-field class="w-100">
+                        <mat-label>Godina rođenja</mat-label>
+                        <input matInput formControlName="godinaRodjenja">
+                        <mat-error *ngIf="upisForm.controls.godinaRodjenja.touched && upisForm.controls.godinaRodjenja.dirty && upisForm.controls.godinaRodjenja.errors?.required">
+                            Obavezan podatak.
+                        </mat-error>
+                        <mat-error *ngIf="upisForm.controls.godinaRodjenja.touched && upisForm.controls.godinaRodjenja.dirty && upisForm.controls.godinaRodjenja.errors?.pattern">
+                            Godina rođenja je u lošem formatu.
+                        </mat-error>
+                      </mat-form-field>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <mat-form-field class="w-100">
+                        <mat-label>Adresa</mat-label>
+                        <input matInput formControlName="adresa">
+                        <mat-error class="form-text" *ngIf="upisForm.controls.adresa.touched && upisForm.controls.adresa.dirty && upisForm.controls.adresa.errors?.required">
+                            Obavezan podatak.
+                        </mat-error>
+                      </mat-form-field>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary" [disabled]="!upisForm.valid">Prijavi se</button>
+            </form>
+        </div>
+    </div>
+</div>

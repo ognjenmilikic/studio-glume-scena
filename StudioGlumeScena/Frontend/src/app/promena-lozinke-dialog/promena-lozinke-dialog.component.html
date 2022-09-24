@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <form [formGroup]="promenaLozinkeForm" (ngSubmit)="promeniLozinku()">
+    <div class="row mb-4">
+      <mat-form-field class="col-md-6">
+        <mat-label>Stara lozinka</mat-label>
+        <input matInput formControlName="staraLozinka" [type]="staraLozinkaVidljiva ? 'text' : 'password'">
+        <mat-icon (click)="promeniVidljivostStareLozinke()" matSuffix [matTooltip]="staraLozinkaVidljiva ? 'Sakrij lozinku' : 'Prikaži lozinku'">remove_red_eye</mat-icon>
+        <mat-error *ngIf="promenaLozinkeForm.controls.staraLozinka.touched && promenaLozinkeForm.controls.staraLozinka.errors?.required">Obavezno polje.</mat-error>
+        <mat-error *ngIf="promenaLozinkeForm.controls.staraLozinka.touched && promenaLozinkeForm.controls.staraLozinka.errors?.minlength">Lozinka mora da sadrži najmanje 8 karaktera.</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-md-6">
+        <mat-label>Nova lozinka</mat-label>
+        <input matInput formControlName="novaLozinka" [type]="novaLozinkaVidljiva ? 'text' : 'password'">
+        <mat-icon (click)="promeniVidljivostNoveLozinke()" matSuffix [matTooltip]="novaLozinkaVidljiva ? 'Sakrij lozinku' : 'Prikaži lozinku'">remove_red_eye</mat-icon>
+        <mat-error *ngIf="promenaLozinkeForm.controls.novaLozinka.touched && promenaLozinkeForm.controls.novaLozinka.errors?.required">Obavezno polje.</mat-error>
+        <mat-error *ngIf="promenaLozinkeForm.controls.novaLozinka.touched && promenaLozinkeForm.controls.novaLozinka.errors?.minlength">Lozinka mora da sadrži najmanje 8 karaktera.</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="row">
+        <div class="col-12 d-flex justify-content-end">
+            <button class="btn btn-primary me-2" type="submit" [disabled]="promenaLozinkeForm.invalid">Sačuvaj</button>
+            <button class="btn btn-secondary" type="button" (click)="close()">Izađi</button>
+        </div>
+    </div>
+  </form>
+</div>

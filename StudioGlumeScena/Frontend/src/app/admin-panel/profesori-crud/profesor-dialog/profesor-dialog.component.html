@@ -1,0 +1,56 @@
+<div class="container-fluid info-section-1" *ngIf="!!profesorForm">
+  <p class="h3 text-center">{{ naslov }}</p>
+  <form [formGroup]="profesorForm" (ngSubmit)="sacuvaj()">
+    <div class="row">
+      <mat-form-field class="col-md-6">
+        <mat-label>Ime</mat-label>
+        <input matInput formControlName="ime">
+        <mat-error *ngIf="profesorForm.controls.ime.touched && profesorForm.controls.ime.errors?.required">
+          Obavezno polje.
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-md-6">
+        <mat-label>Prezime</mat-label>
+        <input matInput formControlName="prezime">
+        <mat-error *ngIf="profesorForm.controls.prezime.touched && profesorForm.controls.prezime.errors?.required">
+          Obavezno polje.
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field class="col-md-6">
+        <mat-label>Broj telefona</mat-label>
+        <input matInput formControlName="brojTelefona">
+        <mat-error *ngIf="profesorForm.controls.brojTelefona.touched && profesorForm.controls.brojTelefona.errors?.required">
+          Obavezno polje.
+        </mat-error>
+        <mat-error *ngIf="profesorForm.controls.brojTelefona.touched && profesorForm.controls.brojTelefona.errors?.pattern">
+          Broj telefona je u pogrešnom formatu.
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-md-6">
+        <mat-label>Adresa</mat-label>
+        <input matInput formControlName="adresa">
+        <mat-error *ngIf="profesorForm.controls.adresa.touched && profesorForm.controls.adresa.errors?.required">
+          Obavezno polje.
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field class="col-md-12">
+        <mat-label>E-mail</mat-label>
+        <input matInput formControlName="email">
+        <mat-error *ngIf="profesorForm.controls.email.touched && profesorForm.controls.email.errors?.required">
+          Obavezno polje.
+        </mat-error>
+        <mat-error *ngIf="profesorForm.controls.email.touched && profesorForm.controls.email.errors?.email">
+          E-mail je u lošem formatu.
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="float-end">
+      <button class="btn btn-primary me-3" type="submit" *ngIf="!pregled" [disabled]="profesorForm.invalid">Sačuvaj</button>
+      <button class="btn btn-secondary" type="button" (click)="close()">Izađi</button>
+    </div>
+  </form>
+</div>

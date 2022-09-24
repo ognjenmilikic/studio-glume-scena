@@ -1,0 +1,80 @@
+<header class="fixed-top">
+  <nav class="navbar navbar-expand-lg" (scroll)="onScroll()">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="">
+        <img src="assets/images/logo/logo.png" alt="logo" width="30" height="30" class="d-inline-block align-text-top">
+        Studio glume „Scena”
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="fas fa-bars navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" routerLinkActive="active-link" routerLink="/" [routerLinkActiveOptions]="{ exact: true }">Naslovna</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" routerLinkActive="active-link" routerLink="/predstave">Predstave</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" routerLinkActive="active-link" routerLink="/kontakt">Kontakt</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" routerLinkActive="active-link" routerLink="/upis" *ngIf="!userAuthenticated()">Upis</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" routerLinkActive="active-link" routerLink="/login" *ngIf="!userAuthenticated()">Prijava</a>
+          </li>
+          <li class="nav-item dropdown" *ngIf="userAuthenticated()">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              {{vratiImeIPrezimeKorisnika()}}
+            </a>
+            <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item d-flex align-items-center" routerLinkActive="active-link" routerLink="/admin-panel" *ngIf="administratorUlogovan()"><mat-icon>assignment</mat-icon><p class="m-0">Admin panel</p></a></li>
+              <li><a class="dropdown-item d-flex align-items-center" routerLinkActive="active-link" routerLink="/profesor-panel" *ngIf="profesorUlogovan()"><mat-icon>assignment</mat-icon><p class="m-0">Profesor panel</p></a></li>
+              <li><a class="dropdown-item d-flex align-items-center" routerLinkActive="active-link" routerLink="/ucenik-panel" *ngIf="ucenikUlogovan()"><mat-icon>assignment</mat-icon><p class="m-0">Učenik panel</p></a></li>
+              <li><a class="dropdown-item d-flex align-items-center" (click)="promenaLozinke()"><mat-icon>lock</mat-icon><p class="m-0">Promena lozinke</p></a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item d-flex align-items-center" (click)="logout()"><mat-icon>exit_to_app</mat-icon><p class="m-0">Odjavi se</p></a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<router-outlet></router-outlet>
+<footer>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4 d-flex justify-content-center align-items-center p-4">
+        <img width="100" height="100" class="img-fluid" src="assets/images/logo/logo.png">
+      </div>
+      <div class="col-md-4 d-flex align-items-center justify-content-center p-4">
+        <div>
+          <p class="h5 text-center">Zaprati nas na društvenim mrežama</p>
+          <div class="text-center">
+            <a href="https://www.facebook.com">Facebook <i class="fab fa-facebook"></i></a><br>
+            <a href="https://www.instagram.com">Instagram <i class="fab fa-instagram-square"></i></a><br>
+            <a href="https://www.youtube.com">Youtube <i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 d-flex align-items-center justify-content-center p-4">
+        <div>
+          <p class="h5 text-center">Kontaktiraj nas</p>
+          <div class="text-center">
+            <p class="m-0"><a href="tel:+381641203395"><i class="fas fa-phone"></i> +381641203395</a></p>
+            <p class="m-0"><a href="mailto:studioglumescena@gmail.com"><i class="fas fa-envelope"></i> studioglumescena@gmail.com</a></p>
+            <p class="m-0"><i class="fas fa-map-marker-alt"></i> Timočke divizije 1/9</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center p-3">
+        <p class="my-auto">&copy;2021. Studio glume „Scena”. Sva prava zadržana.</p>
+      </div>
+    </div>
+  </div>
+</footer>

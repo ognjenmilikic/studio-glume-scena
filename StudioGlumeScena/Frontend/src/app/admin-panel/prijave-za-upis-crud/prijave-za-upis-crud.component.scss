@@ -1,0 +1,35 @@
+.info-section-1{
+  background-color: #681a1a;
+}
+.info-section-2{
+  background-color: #9C6615;
+}
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+td, th {
+  width: 16%;
+}
+.big-padding-top {
+  padding-top: 5rem;
+}
+::ng-deep {
+  .error-snackbar {
+      background-color: #817200;
+      color: whitesmoke;
+  }
+  .success-snackbar {
+      background-color: #054f00;
+      color: whitesmoke;
+  }
+}
+
+.neprocitana-prijava {
+  background-color: #817200;
+}

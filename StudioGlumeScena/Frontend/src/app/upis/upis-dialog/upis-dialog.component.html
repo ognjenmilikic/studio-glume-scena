@@ -1,0 +1,18 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 d-flex align-items-center">
+            <div>
+                <p class="h1">{{ data.naslov }}</p>
+                <p class="h6">{{ data.tekst }}</p>
+            </div>
+        </div>
+        <div class="col-md-6 d-flex align-items-center justify-content-center p-3">
+            <img class="img-fluid" [src]="data.putanjaDoSlike">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <button class="btn btn-secondary float-end" (click)="close()">Izađi</button>
+        </div>
+    </div>
+</div>

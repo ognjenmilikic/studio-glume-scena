@@ -1,0 +1,76 @@
+D:\diplomski\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\StudioGlumeScena.BusinessLogic.csproj.AssemblyReference.cache
+D:\diplomski\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\StudioGlumeScena.BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+D:\diplomski\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\StudioGlumeScena.BusinessLogic.AssemblyInfoInputs.cache
+D:\diplomski\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\StudioGlumeScena.BusinessLogic.AssemblyInfo.cs
+D:\diplomski\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\StudioGlumeScena.BusinessLogic.csproj.CoreCompileInputs.cache
+D:\diplomski\Backend\StudioGlumeScena.BusinessLogic\bin\Debug\net6.0\StudioGlumeScena.BusinessLogic.deps.json
+D:\diplomski\Backend\StudioGlumeScena.BusinessLogic\bin\Debug\net6.0\StudioGlumeScena.BusinessLogic.runtimeconfig.json
+D:\diplomski\Backend\StudioGlumeScena.BusinessLogic\bin\Debug\net6.0\StudioGlumeScena.BusinessLogic.dll
+D:\diplomski\Backend\StudioGlumeScena.BusinessLogic\bin\Debug\net6.0\StudioGlumeScena.BusinessLogic.pdb
+D:\diplomski\Backend\StudioGlumeScena.BusinessLogic\bin\Debug\net6.0\StudioGlumeScena.Common.dll
+D:\diplomski\Backend\StudioGlumeScena.BusinessLogic\bin\Debug\net6.0\StudioGlumeScena.DataAccess.dll
+D:\diplomski\Backend\StudioGlumeScena.BusinessLogic\bin\Debug\net6.0\StudioGlumeScena.Common.pdb
+D:\diplomski\Backend\StudioGlumeScena.BusinessLogic\bin\Debug\net6.0\StudioGlumeScena.DataAccess.pdb
+D:\diplomski\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\StudioGlumeScena.BusinessLogic.csproj.CopyComplete
+D:\diplomski\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\StudioGlumeScena.BusinessLogic.dll
+D:\diplomski\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\refint\StudioGlumeScena.BusinessLogic.dll
+D:\diplomski\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\StudioGlumeScena.BusinessLogic.pdb
+D:\diplomski\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\StudioGlumeScena.BusinessLogic.genruntimeconfig.cache
+D:\diplomski\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\ref\StudioGlumeScena.BusinessLogic.dll
+C:\diplomski\Backend\StudioGlumeScena.BusinessLogic\bin\Debug\net6.0\StudioGlumeScena.BusinessLogic.deps.json
+C:\diplomski\Backend\StudioGlumeScena.BusinessLogic\bin\Debug\net6.0\StudioGlumeScena.BusinessLogic.runtimeconfig.json
+C:\diplomski\Backend\StudioGlumeScena.BusinessLogic\bin\Debug\net6.0\StudioGlumeScena.BusinessLogic.dll
+C:\diplomski\Backend\StudioGlumeScena.BusinessLogic\bin\Debug\net6.0\StudioGlumeScena.BusinessLogic.pdb
+C:\diplomski\Backend\StudioGlumeScena.BusinessLogic\bin\Debug\net6.0\StudioGlumeScena.Common.dll
+C:\diplomski\Backend\StudioGlumeScena.BusinessLogic\bin\Debug\net6.0\StudioGlumeScena.DataAccess.dll
+C:\diplomski\Backend\StudioGlumeScena.BusinessLogic\bin\Debug\net6.0\StudioGlumeScena.Common.pdb
+C:\diplomski\Backend\StudioGlumeScena.BusinessLogic\bin\Debug\net6.0\StudioGlumeScena.DataAccess.pdb
+C:\diplomski\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\StudioGlumeScena.BusinessLogic.csproj.AssemblyReference.cache
+C:\diplomski\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\StudioGlumeScena.BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+C:\diplomski\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\StudioGlumeScena.BusinessLogic.AssemblyInfoInputs.cache
+C:\diplomski\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\StudioGlumeScena.BusinessLogic.AssemblyInfo.cs
+C:\diplomski\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\StudioGlumeScena.BusinessLogic.csproj.CoreCompileInputs.cache
+C:\diplomski\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\StudioGlumeScena.BusinessLogic.csproj.CopyComplete
+C:\diplomski\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\StudioGlumeScena.BusinessLogic.dll
+C:\diplomski\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\refint\StudioGlumeScena.BusinessLogic.dll
+C:\diplomski\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\StudioGlumeScena.BusinessLogic.pdb
+C:\diplomski\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\StudioGlumeScena.BusinessLogic.genruntimeconfig.cache
+C:\diplomski\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\ref\StudioGlumeScena.BusinessLogic.dll
+C:\Users\Ognjen\OneDrive\Radna površina\diplomski\Backend\StudioGlumeScena.BusinessLogic\bin\Debug\net6.0\StudioGlumeScena.BusinessLogic.deps.json
+C:\Users\Ognjen\OneDrive\Radna površina\diplomski\Backend\StudioGlumeScena.BusinessLogic\bin\Debug\net6.0\StudioGlumeScena.BusinessLogic.runtimeconfig.json
+C:\Users\Ognjen\OneDrive\Radna površina\diplomski\Backend\StudioGlumeScena.BusinessLogic\bin\Debug\net6.0\StudioGlumeScena.BusinessLogic.dll
+C:\Users\Ognjen\OneDrive\Radna površina\diplomski\Backend\StudioGlumeScena.BusinessLogic\bin\Debug\net6.0\StudioGlumeScena.BusinessLogic.pdb
+C:\Users\Ognjen\OneDrive\Radna površina\diplomski\Backend\StudioGlumeScena.BusinessLogic\bin\Debug\net6.0\StudioGlumeScena.Common.dll
+C:\Users\Ognjen\OneDrive\Radna površina\diplomski\Backend\StudioGlumeScena.BusinessLogic\bin\Debug\net6.0\StudioGlumeScena.DataAccess.dll
+C:\Users\Ognjen\OneDrive\Radna površina\diplomski\Backend\StudioGlumeScena.BusinessLogic\bin\Debug\net6.0\StudioGlumeScena.Common.pdb
+C:\Users\Ognjen\OneDrive\Radna površina\diplomski\Backend\StudioGlumeScena.BusinessLogic\bin\Debug\net6.0\StudioGlumeScena.DataAccess.pdb
+C:\Users\Ognjen\OneDrive\Radna površina\diplomski\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\StudioGlumeScena.BusinessLogic.csproj.AssemblyReference.cache
+C:\Users\Ognjen\OneDrive\Radna površina\diplomski\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\StudioGlumeScena.BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ognjen\OneDrive\Radna površina\diplomski\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\StudioGlumeScena.BusinessLogic.AssemblyInfoInputs.cache
+C:\Users\Ognjen\OneDrive\Radna površina\diplomski\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\StudioGlumeScena.BusinessLogic.AssemblyInfo.cs
+C:\Users\Ognjen\OneDrive\Radna površina\diplomski\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\StudioGlumeScena.BusinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\Ognjen\OneDrive\Radna površina\diplomski\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\StudioGlumeScena.BusinessLogic.csproj.CopyComplete
+C:\Users\Ognjen\OneDrive\Radna površina\diplomski\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\StudioGlumeScena.BusinessLogic.dll
+C:\Users\Ognjen\OneDrive\Radna površina\diplomski\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\refint\StudioGlumeScena.BusinessLogic.dll
+C:\Users\Ognjen\OneDrive\Radna površina\diplomski\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\StudioGlumeScena.BusinessLogic.pdb
+C:\Users\Ognjen\OneDrive\Radna površina\diplomski\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\StudioGlumeScena.BusinessLogic.genruntimeconfig.cache
+C:\Users\Ognjen\OneDrive\Radna površina\diplomski\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\ref\StudioGlumeScena.BusinessLogic.dll
+C:\diplomski\StudioGlumeScena\Backend\StudioGlumeScena.BusinessLogic\bin\Debug\net6.0\StudioGlumeScena.BusinessLogic.deps.json
+C:\diplomski\StudioGlumeScena\Backend\StudioGlumeScena.BusinessLogic\bin\Debug\net6.0\StudioGlumeScena.BusinessLogic.runtimeconfig.json
+C:\diplomski\StudioGlumeScena\Backend\StudioGlumeScena.BusinessLogic\bin\Debug\net6.0\StudioGlumeScena.BusinessLogic.dll
+C:\diplomski\StudioGlumeScena\Backend\StudioGlumeScena.BusinessLogic\bin\Debug\net6.0\StudioGlumeScena.BusinessLogic.pdb
+C:\diplomski\StudioGlumeScena\Backend\StudioGlumeScena.BusinessLogic\bin\Debug\net6.0\StudioGlumeScena.Common.dll
+C:\diplomski\StudioGlumeScena\Backend\StudioGlumeScena.BusinessLogic\bin\Debug\net6.0\StudioGlumeScena.DataAccess.dll
+C:\diplomski\StudioGlumeScena\Backend\StudioGlumeScena.BusinessLogic\bin\Debug\net6.0\StudioGlumeScena.Common.pdb
+C:\diplomski\StudioGlumeScena\Backend\StudioGlumeScena.BusinessLogic\bin\Debug\net6.0\StudioGlumeScena.DataAccess.pdb
+C:\diplomski\StudioGlumeScena\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\StudioGlumeScena.BusinessLogic.csproj.AssemblyReference.cache
+C:\diplomski\StudioGlumeScena\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\StudioGlumeScena.BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+C:\diplomski\StudioGlumeScena\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\StudioGlumeScena.BusinessLogic.AssemblyInfoInputs.cache
+C:\diplomski\StudioGlumeScena\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\StudioGlumeScena.BusinessLogic.AssemblyInfo.cs
+C:\diplomski\StudioGlumeScena\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\StudioGlumeScena.BusinessLogic.csproj.CoreCompileInputs.cache
+C:\diplomski\StudioGlumeScena\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\StudioGlumeScena.BusinessLogic.csproj.CopyComplete
+C:\diplomski\StudioGlumeScena\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\StudioGlumeScena.BusinessLogic.dll
+C:\diplomski\StudioGlumeScena\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\refint\StudioGlumeScena.BusinessLogic.dll
+C:\diplomski\StudioGlumeScena\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\StudioGlumeScena.BusinessLogic.pdb
+C:\diplomski\StudioGlumeScena\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\StudioGlumeScena.BusinessLogic.genruntimeconfig.cache
+C:\diplomski\StudioGlumeScena\Backend\StudioGlumeScena.BusinessLogic\obj\Debug\net6.0\ref\StudioGlumeScena.BusinessLogic.dll

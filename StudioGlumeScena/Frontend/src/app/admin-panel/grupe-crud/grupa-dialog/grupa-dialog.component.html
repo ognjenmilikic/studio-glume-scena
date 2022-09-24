@@ -1,0 +1,68 @@
+<div class="container-fluid info-section-1" *ngIf="!!grupaForm">
+  <p class="h3 text-center">{{ naslov }}</p>
+  <form [formGroup]="grupaForm" (ngSubmit)="sacuvaj()">
+    <div class="row">
+      <mat-form-field class="col-md-6">
+        <mat-label>Vreme održavanja časa</mat-label>
+        <input matInput formControlName="vremeOdrzavanjaCasa">
+        <mat-error *ngIf="grupaForm.controls.vremeOdrzavanjaCasa.touched && grupaForm.controls.vremeOdrzavanjaCasa.errors?.required">
+          Obavezno polje.
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-md-6">
+        <mat-label>Dan održavanja časa</mat-label>
+        <mat-select matInput formControlName="danOdrzavanjaCasa">
+          <mat-option value="Ponedeljak">Ponedeljak</mat-option>
+          <mat-option value="Utorak">Utorak</mat-option>
+          <mat-option value="Sreda">Sreda</mat-option>
+          <mat-option value="Četvrtak">Četvrtak</mat-option>
+          <mat-option value="Petak">Petak</mat-option>
+          <mat-option value="Subota">Subota</mat-option>
+          <mat-option value="Nedelja">Nedelja</mat-option>
+        </mat-select>
+        <mat-error *ngIf="grupaForm.controls.danOdrzavanjaCasa.touched && grupaForm.controls.danOdrzavanjaCasa.errors?.required">
+          Obavezno polje.
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field class="col-md-6 w-100">
+        <mat-label>Profesor</mat-label>
+        <mat-select formControlName="profesorId">
+          <mat-option *ngFor="let profesor of profesori" [value]="profesor.id">
+            {{ profesor.ime + " " + profesor.prezime }}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="grupaForm.controls.profesorId.touched && grupaForm.controls.profesorId.errors?.required">
+          Obavezno polje.
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-md-6 w-100">
+        <mat-label>Uzrast</mat-label>
+        <mat-select formControlName="uzrastId">
+          <mat-option *ngFor="let uzrast of uzrasti" [value]="uzrast.id">
+            {{ uzrast.naziv }}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="grupaForm.controls.uzrastId.touched && grupaForm.controls.uzrastId.errors?.required">
+          Obavezno polje.
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <mat-form-field class="col-md-12 w-100">
+      <mat-label>Lokacija</mat-label>
+      <mat-select formControlName="lokacijaId">
+        <mat-option *ngFor="let lokacija of lokacije" [value]="lokacija.id">
+          {{ lokacija.naziv }}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="grupaForm.controls.lokacijaId.touched && grupaForm.controls.lokacijaId.errors?.required">
+        Obavezno polje.
+      </mat-error>
+    </mat-form-field>
+    <div class="float-end">
+      <button class="btn btn-primary me-3" type="submit" *ngIf="!pregled" [disabled]="grupaForm.invalid">Sačuvaj</button>
+      <button class="btn btn-secondary" type="button" (click)="close()">Izađi</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,17 @@
+<div class="container-fluid info-section-1" *ngIf="!!zadatakForm">
+  <p class="h3 text-center">Zadavanje novog zadatka</p>
+  <form [formGroup]="zadatakForm" (ngSubmit)="sacuvaj()">
+    <div class="row">
+      <mat-form-field class="col-md-12">
+        <textarea matInput formControlName="aktivanZadatak" cdkTextareaAutosize cdkAutosizeMinRows="1"></textarea>
+        <mat-error *ngIf="zadatakForm.controls.aktivanZadatak.touched && zadatakForm.controls.aktivanZadatak.dirty && zadatakForm.controls.aktivanZadatak.errors?.required">
+          Obavezan podatak.
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="float-end">
+      <button class="btn btn-primary me-3" type="submit" [disabled]="zadatakForm.invalid">Sačuvaj</button>
+      <button class="btn btn-secondary" type="button" (click)="close()">Izađi</button>
+    </div>
+  </form>
+</div>

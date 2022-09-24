@@ -1,0 +1,23 @@
+@media only screen and (min-width:768px) {
+    .fit-height{
+        min-height: calc(100vh - 214px);
+    }
+}
+
+.form-text{
+    color: whitesmoke;
+}
+::placeholder{
+    color: whitesmoke;
+}
+
+mat-icon:hover {
+  cursor: pointer;
+}
+
+::ng-deep {
+  .error-snackbar {
+      background-color: #817200;
+      color: whitesmoke;
+  }
+}
