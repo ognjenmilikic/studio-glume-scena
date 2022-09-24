@@ -38,7 +38,7 @@ export class AdminPanelHomeComponent implements OnInit, OnDestroy {
   sveLokacije: Lokacija[] = [];
   sviUzrasti: Uzrast[] = [];
   sveGrupeTable: GrupaTable[] = [];
-  azurirajUcenikeSub: Subscription;
+  inicijalniPodaciSub: Subscription;
 
   constructor(private ucenikService: UcenikService, private profesorService: ProfesorService,
     private grupaService: GrupaService, private prijavaZaUpisService: UpisService,
@@ -49,7 +49,7 @@ export class AdminPanelHomeComponent implements OnInit, OnDestroy {
   }
 
   ucitajStranicu(): void {
-    forkJoin({
+    this.inicijalniPodaciSub = forkJoin({
       vratiSveGrupeRequest: this.grupaService.vratiSveGrupe(),
       vratiSveProfesoreRequest: this.profesorService.vratiSveProfesore(),
       vratiSveUcenikeRequest: this.ucenikService.vratiSveUcenike(),
@@ -128,6 +128,6 @@ export class AdminPanelHomeComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    if (!!this.azurirajUcenikeSub) { this.azurirajUcenikeSub.unsubscribe() }
+    if (!!this.inicijalniPodaciSub) { this.inicijalniPodaciSub.unsubscribe() }
   }
 }
